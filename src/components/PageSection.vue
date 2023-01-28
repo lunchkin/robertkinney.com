@@ -1,16 +1,21 @@
 <template>
-	<div class="hello">
-		<h1>
-			{{ props.msg }}
-		</h1>
+	<div class="siteSection">
+		<h2
+			v-if="props.title"
+			class="sectionTitle"
+		>
+			{{ props.title }}
+		</h2>
+		<div class="sectionContent">
+			<slot />
+		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-// import PageSection from "@/components/PageSection.vue";
 
 const props = defineProps<{
-	msg: string;
+	title?: string;
 }>();
 
 </script>

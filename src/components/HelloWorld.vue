@@ -1,22 +1,23 @@
 <template>
 	<div class="hello">
 		<h1>
-			{{ props.msg }}
+			{{ msg }} {{ otherProp }}
 		</h1>
 	</div>
 </template>
 
 <script setup lang="ts">
-// import PageSection from "@/components/PageSection.vue";
-
-const props = defineProps<{
+interface Props {
 	msg: string;
-}>();
+	otherProp?: string;
+}
 
+withDefaults(defineProps<Props>(), {
+	otherProp: "Other Prop"
+});
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .siteSection {
 	background-color: #333333;
 	color: #ffffff;

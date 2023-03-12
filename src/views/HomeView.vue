@@ -8,6 +8,15 @@
 
 		<PageSection
 			title="Section Title"
+			:section="{ title: 'Section Title', body: 'Some Content' }"
+		>
+			<AboutMe />
+		</PageSection>
+
+		<PageSection
+			title="Section Title"
+			:section="{ title: 'Section Title', body: 'Some Content' }"
+
 			class="meGreen"
 		>
 			<h3>
@@ -19,21 +28,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// @ is an alias to /src
+
 import HelloWorld from "@/components/HelloWorld.vue";
 import PageSection from "@/components/PageSection.vue";
+import AboutMe from "@/components/AboutMe.vue";
 
 export default defineComponent({
 	name: "HomeView",
 	components: {
 		HelloWorld,
-		PageSection
+		PageSection,
+		AboutMe
 	}
 });
 </script>
-
-<style lang="scss" scoped>
-.meGreen {
-	background-color: #42b983;
-}
-</style>

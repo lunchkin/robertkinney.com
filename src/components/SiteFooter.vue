@@ -1,23 +1,16 @@
 <template>
-	<nav class="navGradient">
-		<div>
-			<router-link
-				v-for="route in routes"
-				:key="route.name"
-				:to="route.path"
-			>
-				{{ route.name }}
-			</router-link>
-		</div>
-	</nav>
+	<div>
+		<p>
+			Social Media Links
+		</p>
+
+		<p>
+			Email
+		</p>
+	</div>
 </template>
 
 <script setup lang="ts">
-
-const routes = [
-	{ path: "/", name: "Home" },
-	{ path: "/about", name: "About" },
-];
 
 </script>
 
